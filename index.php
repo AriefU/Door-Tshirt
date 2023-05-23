@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php include 'koneksi.php'?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -50,34 +52,42 @@
                     <div class="product-card">
                         <img src="Door/bj4.jpg" alt="Product 3">
                         <h3>Product 4</h3>
-                        <p>Description of Product 3</p>
+                        <p>Description of Product 4</p>
                     </div>
                 </div>
                 <button class="prev-button">&larr;</button>
                 <button class="next-button">&rarr;</button>
             </div>
         </section>
+          
             
             <section id="contact" class = "contact-us">
                 <h2>Contact Us</h2>
                 
                 <div class="contact-form">
                     <form>
-                        <div class="form-group">
-                            <label for="name">Name:</label>
-                            <input type="text" id="name" name="name" placeholder="Your name">
+                      <div class="form-group">
+                        <div class="form-field">
+                          <label for="name">Name:</label>
+                          <input type="text" id="name" name="name" placeholder="Your name">
                         </div>
-                        <div class="form-group">
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email" placeholder="Your email">
+                        <div class="form-field">
+                          <label for="email">Email:</label>
+                          <input type="email" id="email" name="email" placeholder="Your email">
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message:</label>
-                            <textarea id="message" name="message" placeholder="Your message"></textarea>
+                        <div class="form-field">
+                          <label for="phone">Phone Number:</label>
+                          <input type="text" id="phone" name="phone" placeholder="Your phone number">
                         </div>
-                        <button type="submit">Send</button>
+                      </div>
+                      <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" placeholder="Your message"></textarea>
+                      </div>
+                      <button type="submit">Send</button>
                     </form>
-                </div>
+                  </div>
+                  
                 
                 <div class="find-us">
                     <h3>Find Us</h3>

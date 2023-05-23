@@ -3,28 +3,39 @@
 const sliderContainer = document.querySelector('.slider-container');
 const prevButton = document.querySelector('.prev-button');
 const nextButton = document.querySelector('.next-button');
+const productCards = Array.from(document.querySelectorAll('.product-card'));
 
-const productCards = document.querySelectorAll('.product-card');
-const cardWidth = productCards[0].offsetWidth;
+let currentIndex = 0;
+const maxIndex = productCards.length - 1;
 
-let currentPosition = 0;
-const totalProducts = productCards.length;
-const visibleProducts = Math.floor(sliderContainer.offsetWidth / cardWidth);
-const maxMovement = (totalProducts - visibleProducts) * cardWidth;
+function showProducts() {
+  productCards.forEach((card, index) => {
+    if (index >= currentIndex && index < currentIndex + 3) {
+      card.style.display = 'block';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
 
-nextButton.addEventListener('click', () => {
-  if (currentPosition > -maxMovement) {
-    currentPosition -= cardWidth;
-    sliderContainer.style.transform = `translateX(${currentPosition}px)`;
+function showNextProducts() {
+  if (currentIndex < maxIndex - 2) {
+    currentIndex++;
+    showProducts();
   }
-});
+}
 
-prevButton.addEventListener('click', () => {
-  if (currentPosition < 0) {
-    currentPosition += cardWidth;
-    sliderContainer.style.transform = `translateX(${currentPosition}px)`;
+function showPrevProducts() {
+  if (currentIndex > 0) {
+    currentIndex--;
+    showProducts();
   }
-});
+}
+
+nextButton.addEventListener('click', showNextProducts);
+prevButton.addEventListener('click', showPrevProducts);
+
+showProducts();
 
 
 // JavaScript code for the contact section
@@ -57,21 +68,14 @@ contactForm.addEventListener('submit', function(event) {
 
 // Initialize and display the Google Map
 function initMap() {
-    // Specify the coordinates for the map center
-    const mapCenter = { lat: 5.554550635413467, lng:  95.34431235860512 };
+  var mapOptions = {
+    center: { lat: 5.554550635413467, lng:  95.34431235860512 }, // Replace with the desired coordinates
+    zoom: 12, // Adjust the zoom level as needed
+  };
   
-    // Create a new map instance
-    const map = new google.maps.Map(document.getElementById('map'), {
-      center: mapCenter,
-      zoom: 15 // Adjust the zoom level as desired
-    });
-  
-    // Add a marker at the specified coordinates
-    const marker = new google.maps.Marker({
-      position: mapCenter,
-      map: map,
-      title: 'Door T-Shirt And Digital Printing' // Adjust the marker title as desired
-    });
-  }
+  var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+
   
 
+  
