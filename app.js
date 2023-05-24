@@ -76,6 +76,26 @@ function initMap() {
   var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 }
 
+document.querySelector('form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent form submission
+  
+  // Perform form validation or additional processing if needed
+  
+  // Show success pop-up
+  showSuccessPopup();
+});
+
+function showSuccessPopup() {
+  alert("Purchase successful!");
+}
+
+
+
+
+
+
+
+
   
 
   
