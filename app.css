@@ -6,6 +6,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    border: 0;
 }
 
 header {
@@ -48,7 +49,7 @@ a {
 }
 
 a:hover {
-    color: #ffffff;
+    color: #f1df96;
 }
 
 
@@ -290,90 +291,5 @@ a:hover {
     background-image: url('Door/icons8-whatsapp-50.png');
   }
   
-  /* product-details */
-
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 20px;
-  }
   
-  #product-details {
-    display: flex;
-    justify-content: space-between; /* Align items on the horizontal axis */
-    align-items: flex-start; /* Align items from the top */
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .product-image img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 4px;
-  }
-  
-  .product-info {
-    flex: 1; /* Take remaining space */
-    margin-left: 20px; /* Add space between product image and info */
-  }
-  
-  .product-info h2 {
-    margin-bottom: 10px;
-  }
-  
-  .product-info p {
-    margin-bottom: 5px;
-    color: #777777;
-  }
-  
-  form {
-    flex: 1; /* Take remaining space */
-    margin-left: 20px; /* Add space between product info and form */
-    display: flex;
-    flex-direction: column; /* Align form items vertically */
-  }
-  
-  form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-
-  }
-
-  #quantity {
-    height: 20px; /* Adjust the height as needed */
-    width: 520px; /* Adjust the width as needed */
-  }
-
-  #total_price {
-    height: 20px; /* Adjust the height as needed */
-    width: 520px; /* Adjust the width as needed */
-  }
-  
-  form select,
-  form input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  form button[type="submit"] {
-    padding: 10px 20px;
-    background-color: #555555;
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  form button[type="submit"]:hover {
-    background-color: #333333;
-  }
     /*Warna Kuning color: #ecc52e; */

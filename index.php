@@ -41,7 +41,7 @@
             while ($row = mysqli_fetch_assoc($result)) {
                 $productId = $row['id'];
                 $productName = $row['name'];
-                $productDescription = $row['description'];
+                $productPrice = $row['price'];
                 $productImage = $row['image'];
             ?>
             <a href="product-details.php?id=<?php echo $productId; ?>">
@@ -49,7 +49,7 @@
                     <div class="product-card">
                         <img src="data:image/jpg;base64,<?php echo base64_encode($productImage); ?>" alt="<?php echo $productName; ?>">
                         <h3><?php echo $productName; ?></h3>
-                        <p><?php echo $productDescription; ?></p>
+                        <p>Price: Rp.<?php echo $productPrice; ?></p>
                     </div>
                 </div>
             </a>
