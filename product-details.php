@@ -97,6 +97,7 @@
         <label for="total_price">Total Price:</label>
         <input type="text" name="total_price" id="total_price" readonly>
         <button type="submit">Add To Cart</button>
+        <button onclick="window.location.href = 'checkout.php';">CheckOut</button>
     </form>
     <button onclick="window.location.href = 'index.php';">Go Back</button>
 </section>
@@ -118,18 +119,7 @@
             totalPriceInput.value = totalPrice.toFixed(0);
         });
 
-        document.querySelector('form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent form submission
-  
-        // Perform form validation or additional processing if needed
-  
-         // Show success pop-up
-        showSuccessPopup();
-        });
-
-        function showSuccessPopup() {
-             alert("Purchase successful!");
-        }
+        
     </script>
 </body>
 
