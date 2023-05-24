@@ -6,6 +6,12 @@ body {
     padding: 20px;
 }
 
+.product-info p {
+    margin-bottom: 5px;
+    color: #777777;
+    white-space: pre-line; /* Add this line */
+}
+
 #product-details {
     display: flex;
     justify-content: center;

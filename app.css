@@ -2,8 +2,9 @@
 
 /* General */
 body {
-    background-color: #eaeaea;
+    background-color: #393838;
     font-family: Arial, sans-serif;
+    color: #ffffff;
     margin: 0;
     padding: 0;
     border: 0;
@@ -291,5 +292,49 @@ a:hover {
     background-image: url('Door/icons8-whatsapp-50.png');
   }
   
+
+  /* For CheckOut */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+table th {
+  background-color: #ecc52e;
+  color: #000000;
+}
+
+table tr:nth-child(even) {
+  background-color: #000000;
+}
+
+table tr:hover {
+  background-color: #000000;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #ecc52e;
+  color: #000000;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d6ad24;
+}
+
   
     /*Warna Kuning color: #ecc52e; */
